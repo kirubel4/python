@@ -1,11 +1,10 @@
 from Resource import MENU,resources,logo
-Penny_coin = 0.01
-Dime_coin = 0.10
-Nickel_coin = 0.05
-Quarter_coin = 0.25
+
 count_money = 0
 
 def calculating():
+    """Calculate the use of resource"""
+
     if ask == "espresso":
         for i in resources:
             resources[i]=resources[i]-MENU["espresso"]["ingredient"][i]
@@ -18,6 +17,8 @@ def calculating():
 
 
 def check():
+    """Check if there is enough resource."""
+
     for keys, values in resources.items():
         if values < MENU[ask]["ingredient"][keys]:
             print("there is no enough "+keys)
@@ -33,13 +34,16 @@ def check():
 
 
 def report():
-    print("water: "+str(resources["water"])+"ml")
-    print("coffee: "+str(resources["coffee"])+"g")
-    print("milk: "+str(resources["milk"])+"ml")
-    print("$"+str(count_money))
+    """Tell the amount of resource."""
+
+    print(f"water: {resources['water']}ml")
+    print(f"coffee: {resources['coffee']}g")
+    print(f"milk: {resources['milk']}ml")
+    print(f"${count_money}")
 
 
 def insert_coin():
+    """Ask the user to insert coin."""
     global Penny,Dime,Nickel,Quarter
     print("please insert coin!")
     Penny = float(input("How many Penny? "))
@@ -49,19 +53,22 @@ def insert_coin():
 
 
 def  sum_coin():
+    """"Add the coin that the customer inserts."""
+
     global Penny,Dime,Nickel,Quarter
-    global Penny_coin,Dime_coin,Nickel_coin,Quarter_coin
-    Penny = Penny_coin*Penny
-    Dime = Dime_coin*Dime
-    Nickel = Nickel_coin * Nickel
-    Quarter = Quarter_coin *Quarter
+    Penny = 0.01*Penny
+    Dime = 0.10*Dime
+    Nickel = 0.05 * Nickel
+    Quarter = 0.25 *Quarter
     sum = Penny +Dime +Nickel+  Quarter
     return float(sum)
 
 
 def changes():
+    """Tell the amount of coin inserts and calculate change if there is."""
+
     temp = sum_coin()
-    print("Your deposit mony $"+str(temp))
+    print("Your deposit money was $"+str(temp))
     change = temp - MENU[ask]["cost"]
     change_result = round(change, 2)
     if temp > MENU[ask]["cost"]:
@@ -72,6 +79,8 @@ def changes():
         again()
 
 def analysis():
+    """This holds the other methods by order"""
+
     check()
     calculating()
     insert_coin()
@@ -80,12 +89,14 @@ def analysis():
 
 
 def again():
+    """Ask the customer and provide service."""
+
     global ask
-    ask = input("what would you like? (espresso / latte / cappuccino / no): ").lower()
+    ask = input("what would you like? (espresso / latte / cappuccino): ").lower()
     if ask == "report":
         report()
         again()
-    elif ask== "no":
+    elif ask == "off":
         print("Thank you for using the coffee machine.")
     elif ask == "espresso":
         analysis()
@@ -93,9 +104,12 @@ def again():
         analysis()
     elif ask == "latte":
         analysis()
+    else:
+        again()
 
 
 def ask_customer():
+    """Ask the customer whether to use the coffee machine or not."""
     order = input("Would you like to use the coffee machine? type 'yes' to use or 'no' to skip. ").lower()
     if order == "yes":
         again()
