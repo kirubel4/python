@@ -129,5 +129,7 @@ chatbot_responses = {
     "what's your favorite type of coffee?": "☕ A classic latte seems to be a favorite for many!",
     "what's your favorite way to enjoy a day off?": "🌻 A mix of relaxation and fun activities sounds perfect!",
     "what's your favorite thing to do at home?": "🏡 I enjoy hearing about cozy home activities that bring joy!",
-    "what's your favorite thing about your hometown?": "🏞️ I love the unique charm and community spirit of hometowns!"
+    "what's your favorite thing about your hometown?": "🏞️ I love the unique charm and community spirit of hometowns!",
+    "what's your dream about us?" : "Nothing to dream about you people"
+
 }
