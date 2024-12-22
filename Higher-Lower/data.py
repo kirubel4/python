@@ -298,5 +298,11 @@ data = [
         'follower_count': 47,
         'description': 'Club Basketball Competition',
         'country': 'United States'
+    },
+    {
+        'name': 'Kirubel',
+        'follower_count': 443,
+        'description': 'Software Engineer',
+        'country': 'Ethiopia'
     }
 ]
