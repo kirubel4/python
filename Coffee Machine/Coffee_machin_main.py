@@ -17,17 +17,17 @@ def calculating():
 
 
 def check():
-    """Check if there is enough resource."""
+    """Check if there is enough resource to work."""
 
     for keys, values in resources.items():
         if values < MENU[ask]["ingredient"][keys]:
-            print("there is no enough "+keys)
+            print("There is no enough "+keys)
             again()
         elif values < MENU[ask]["ingredient"][keys]:
-            print("there is no enough "+keys)
+            print("There is no enough "+keys)
             again()
         elif values < MENU[ask]["ingredient"][keys]:
-            print("there is no enough "+keys)
+            print("There is no enough "+keys)
             again()
     global count_money
     count_money = count_money + MENU[ask]["cost"]
@@ -36,9 +36,9 @@ def check():
 def report():
     """Tell the amount of resource."""
 
-    print(f"water: {resources['water']}ml")
-    print(f"coffee: {resources['coffee']}g")
-    print(f"milk: {resources['milk']}ml")
+    print(f"water: {resources['Water']}ml")
+    print(f"coffee: {resources['cCoffee']}g")
+    print(f"milk: {resources['Milk']}ml")
     print(f"${count_money}")
 
 
@@ -92,7 +92,7 @@ def again():
     """Ask the customer and provide service."""
 
     global ask
-    ask = input("what would you like? (espresso / latte / cappuccino): ").lower()
+    ask = input("What would you like? (espresso / latte / cappuccino): ").lower()
     if ask == "report":
         report()
         again()
