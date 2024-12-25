@@ -49,17 +49,18 @@ def play_again():
         elif user_score == 0:
             return "Win with a Blackjack 😎"
         elif user_score > 21:
-            return "You went over. You lose 😭"
+            return "You went over. You LOSE 😭"
         elif computer_score > 21:
-            return "Opponent went over. You win 😁"
+            return "Opponent went over. You WIN 😁"
         elif user_score > computer_score:
             return "You win 😃"
         else:
             return "You lose 😤"
+        
     print(f"Your final hand {user_cards}, final score {user_score}. ")
     print(f"Computer final hand {computer_cards}, final score {computer_score}.")
     print(compare())
-    ask2 = input("Do you want to play blackjack game again type 'y' to play or type any key to exit. ")
+    ask2 = input("Do you want to play blackjack game again type 'y' to play or type any key to EXIT. ")
     if ask2 == 'y':
         os.system('cls')
         print(art.logo)
@@ -67,7 +68,7 @@ def play_again():
         play_again()
         
         
-ask = input("Do you want to play blackjack game  type 'y' to play or type any key to exit. ")
+ask = input("Do you want to play blackjack game type 'y' to play or type any key to EXIT. ")
 if ask == 'y':
     print(art.logo)
     play_again()
