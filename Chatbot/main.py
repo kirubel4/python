@@ -131,6 +131,7 @@ chatbot_responses = {
     "what's your favorite thing to do at home?": "🏡 I enjoy hearing about cozy home activities that bring joy!",
     "what's your favorite thing about your hometown?": "🏞️ I love the unique charm and community spirit of hometowns!",
     "what's your dream about us?" : "Nothing to dream about you people",
-    "Is there any probablity that AI take the work of human": "yes there is big chance that could happen"
+    "Is there any probablity that AI take the work of human": "yes there is big chance that could happen",
+    "Do you have some kind of feeling or senses": "Not like human but i can sense by using machines like tempreture using sensores."
 
 }
