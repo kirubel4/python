@@ -2,6 +2,7 @@ from main import chatbot_responses
 import random
 
 def start():
+    """the game start from here"""
     ask = input("Do you want to use Chatbot; type 'Yes' or 'No': ").lower()
     if ask == "yes":
         print("Chatbot: Hello! I'm a simple chatbot. How can I assist you today?")
