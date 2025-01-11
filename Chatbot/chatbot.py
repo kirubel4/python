@@ -15,6 +15,7 @@ def start():
 
 
 def repeat():
+    """ask again and again"""
     global human_question
     human_question = input("You: ")
     main()
