@@ -22,6 +22,7 @@ def repeat():
 
 
 def main():
+    """the main chat flow controler"""
     while True:
         if human_question == "quit":
             print(f"Chatbot: {chatbot_responses[human_question]}")
